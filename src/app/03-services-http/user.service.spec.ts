@@ -72,6 +72,7 @@ describe('UserService', () => {
     userService.getUsers().subscribe(users => {
       expect(users).toEqual(expectedUsers)
       expect(users.length).toBeGreaterThan(1);
+      expect(users.length).toBe(2);
       expect(httpClientSpy.get.calls.count()).toBe(1);
       expect(users[0].name).toBe('Leanne Graham');
       done();
@@ -85,7 +86,6 @@ describe('UserService', () => {
       statusText: 'Not Found'
     });
 
-    // httpClientSpy.get.and.returnValue(throwError(errorResponse));
     httpClientSpy.get.and.returnValue(throwError(errorResponse));
 
     userService.getUsers().subscribe(
