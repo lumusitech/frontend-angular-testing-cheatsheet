@@ -26,7 +26,13 @@ describe('BasicsComponent', () => {
   it('lightState should change when button is clicked', () => {
     component.switchToggle();
     expect(component.lightState).withContext('should change to true').toBeTruthy();
+    expect(component.message).toBe('ON');
     component.switchToggle();
     expect(component.lightState).withContext('should change to false').toBeFalsy();
+    expect(component.message).toBe('OFF');
+  });
+
+  it('should ', () => {
+
   });
 });

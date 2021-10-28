@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class BasicsComponent implements OnInit {
 
   lightState: boolean = false;
+  message: string = 'OFF';
 
   constructor() { }
 
@@ -16,6 +17,7 @@ export class BasicsComponent implements OnInit {
 
   switchToggle(): void {
     this.lightState = !this.lightState;
+    this.message = this.lightState ? 'ON' : 'OFF';
   }
 
 }
