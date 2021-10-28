@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="todos" *ngFor="let todo of todos">
-    <app-todo-card [todo]="todo" (todoClicked)="onTodoClicked($event)"></app-todo-card>
-  </div>
+  <ng-container *ngFor="let todo of todos">
+    <app-todo-card class="select" [todo]="todo" (todoClicked)="onTodoClicked($event)"></app-todo-card>
+  </ng-container>
 </div>

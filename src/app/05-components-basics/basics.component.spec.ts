@@ -1,6 +1,8 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { BasicsComponent } from './basics.component';
+
+
 
 describe('BasicsComponent', () => {
   let component: BasicsComponent;
@@ -8,7 +10,8 @@ describe('BasicsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [BasicsComponent]
+      declarations: [BasicsComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
       .compileComponents();
   });
@@ -32,7 +35,4 @@ describe('BasicsComponent', () => {
     expect(component.message).toBe('OFF');
   });
 
-  it('should ', () => {
-
-  });
 });
