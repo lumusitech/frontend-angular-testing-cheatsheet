@@ -1,0 +1,7 @@
+<div class="card">
+  <h3>{{ todo.title }}</h3>
+  <p>{{ todo.body }}</p>
+  <span (click)="onClick()" [class]="todo.completed ? 'completed' : 'pending'">{{
+    todo.completed ? "tarea completada" : "tarea pendiente"
+  }}</span>
+</div>

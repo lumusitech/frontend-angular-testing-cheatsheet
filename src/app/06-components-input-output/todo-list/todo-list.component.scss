@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.todos {
+  background-color: cadetblue;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #b2b2b2;
+  border-radius: 5px;
+  width: 300px;
+}
